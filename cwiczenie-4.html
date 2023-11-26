@@ -27,7 +27,47 @@
 			var b = document.getElementById('b').value;
 			var c = document.getElementById('c').value;
 			
+			var aInt = parseFloat(a)
+			var bInt = parseFloat(b)
+			var cInt = parseFloat(c)
+
+			//Najmniejsza Liczba
+			var min = Math.min(aInt, bInt, cInt)
+	
+			//Największa Liczba
+			var max = Math.max(aInt, bInt, cInt)
+
+			//Wartość bezwzględna
+			var aWar = Math.abs(aInt)
+			var bWar = Math.abs(bInt)
+			var cWar = Math.abs(cInt)
+
+			//Liczba parzysta
+			if(aInt % 2 == 0){
+				var aPar = "- Liczba jest parzysta"
+			}
+			else{
+				var aPar = "- Liczba jest nieparzysta"
+			}
+
+			if(bInt % 2 == 0){
+				var bPar = "- Liczba jest parzysta"
+			}
+			else{
+				var bPar = "- Liczba jest nieparzysta"
+			}
 			
+			if(cInt % 2 == 0){
+				var cPar = " - Liczba jest parzysta"
+			}
+			else{
+				var cPar = " - Liczba jest nieparzysta"
+			}
+
+
+			document.getElementById("wynik").innerHTML = min + '<p></p>' + max + '<p></p>' + aWar + ',' + bWar + ',' + cWar + '<p></p>' + aInt + aPar + ', ' + bInt + bPar + ', ' + cInt + cPar;
+
+
 		}
 
 	</script>
