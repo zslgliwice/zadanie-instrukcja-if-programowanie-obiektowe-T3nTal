@@ -22,7 +22,21 @@
 	
 		function sprawdz()
 		{
-			
+			var imie1=document.getElementById("imie").value;
+			let wiek1=document.getElementById("wiek").value;
+
+			if((imie1=='Brad' && wiek1>=18) || (imie1=='Morgan'&& wiek1>=18)){
+				document.getElementById("wynik").innerHTML = "Gratuluje, możesz wziąć udział w seansie za darmo";
+			}
+			else if(wiek1<16){
+				document.getElementById("wynik").innerHTML = "Nie możesz wziąć udziału w seansie. Jesteś za młody";
+			}
+			else if(wiek1>=16 && wiek1<18){
+				document.getElementById("wynik").innerHTML = imie1 + " możesz wziąć udział w seansie z opiekunem. Cena biletu to 12zł";
+			}
+			else if(wiek1>18){
+				document.getElementById("wynik").innerHTML = imie1 + " możesz wziąć udział w seansie. Cena biletu to 18zł";
+			}
 			
 		}
 
